@@ -1,0 +1,1257 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{340A5C6F-EF4E-45A3-A4E4-63A6DE179BBA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Report_XCS</RootNamespace>
+    <AssemblyName>Report_XCS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.5.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ILG60_00_02_001.aspx" />
+    <Content Include="ILG60_00_03_001.aspx" />
+    <Content Include="ILG60_00_05_001.aspx" />
+    <Content Include="ILG60_00_05_003.aspx" />
+    <Content Include="ILG60_00_06_001.aspx" />
+    <Content Include="ILG60_00_06_003.aspx" />
+    <Content Include="ILG60_00_06_004.aspx" />
+    <Content Include="ILG60_00_06_005.aspx" />
+    <Content Include="ILG60_00_06_006.aspx" />
+    <Content Include="ILG60_00_06_007.aspx" />
+    <Content Include="ILG60_00_06_008.aspx" />
+    <Content Include="ILG60_00_06_002.aspx" />
+    <Content Include="ILG60_00_05_002.aspx" />
+    <Content Include="ILG60_00_01_001.aspx" />
+    <Content Include="ILG60_00_04_001.aspx" />
+    <Content Include="ILG60_00_02_002.aspx" />
+    <Content Include="ILG60_00_04_002.aspx" />
+    <Content Include="ILG60_00_06_009.aspx" />
+    <Content Include="ILG60_00_07_001.aspx" />
+    <Content Include="ILG60_00_08_001.aspx" />
+    <Content Include="ILG60_00_08_002.aspx" />
+    <Content Include="ILG60_00_09_001.aspx" />
+    <Content Include="ILG60_00_09_002.aspx" />
+    <Content Include="ILG60_00_09_003.aspx" />
+    <Content Include="ILG60_00_09_004.aspx" />
+    <Content Include="ILG60_00_11_001.aspx" />
+    <Content Include="ILG60_00_11_002.aspx" />
+    <Content Include="ILG60_00_11_003.aspx" />
+    <Content Include="ILG60_00_12_002_1.aspx" />
+    <Content Include="ILG60_00_12_005.aspx" />
+    <Content Include="ILG60_00_12_001.aspx" />
+    <Content Include="ILG60_00_12_002.aspx" />
+    <Content Include="ILG60_00_12_003.aspx" />
+    <Content Include="ILG60_00_12_004.aspx" />
+    <Content Include="ILLR8109.aspx" />
+    <Content Include="ILLR8113.aspx" />
+    <Content Include="ILLR8114.aspx" />
+    <Content Include="ILLR8201.aspx" />
+    <Content Include="ILLR8203.aspx" />
+    <Content Include="ILLR8204.aspx" />
+    <Content Include="ILLR8210.aspx" />
+    <Content Include="ILLR8301.aspx" />
+    <Content Include="ILLR8303.aspx" />
+    <Content Include="ILLR8304.aspx" />
+    <Content Include="ILLR8305.aspx" />
+    <Content Include="ILLR8306.aspx" />
+    <Content Include="ILLR8311.aspx" />
+    <Content Include="ILLR8312.aspx" />
+    <Content Include="ILLR8314.aspx" />
+    <Content Include="ILLR8341.aspx" />
+    <Content Include="ILLR8501.aspx" />
+    <Content Include="ILLR8502.aspx" />
+    <Content Include="ILLR8503.aspx" />
+    <Content Include="ILLR8509.aspx" />
+    <Content Include="SuppressTarget.aspx" />
+    <Content Include="TESTS.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ILG60_00_02_001.aspx.cs">
+      <DependentUpon>ILG60_00_02_001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_02_001.aspx.designer.cs">
+      <DependentUpon>ILG60_00_02_001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_03_001.aspx.cs">
+      <DependentUpon>ILG60_00_03_001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_03_001.aspx.designer.cs">
+      <DependentUpon>ILG60_00_03_001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_05_001.aspx.cs">
+      <DependentUpon>ILG60_00_05_001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_05_001.aspx.designer.cs">
+      <DependentUpon>ILG60_00_05_001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_05_003.aspx.cs">
+      <DependentUpon>ILG60_00_05_003.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_05_003.aspx.designer.cs">
+      <DependentUpon>ILG60_00_05_003.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_06_001.aspx.cs">
+      <DependentUpon>ILG60_00_06_001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_06_001.aspx.designer.cs">
+      <DependentUpon>ILG60_00_06_001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_06_003.aspx.cs">
+      <DependentUpon>ILG60_00_06_003.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_06_003.aspx.designer.cs">
+      <DependentUpon>ILG60_00_06_003.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_06_004.aspx.cs">
+      <DependentUpon>ILG60_00_06_004.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_06_004.aspx.designer.cs">
+      <DependentUpon>ILG60_00_06_004.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_06_005.aspx.cs">
+      <DependentUpon>ILG60_00_06_005.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_06_005.aspx.designer.cs">
+      <DependentUpon>ILG60_00_06_005.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_06_006.aspx.cs">
+      <DependentUpon>ILG60_00_06_006.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_06_006.aspx.designer.cs">
+      <DependentUpon>ILG60_00_06_006.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_06_007.aspx.cs">
+      <DependentUpon>ILG60_00_06_007.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_06_007.aspx.designer.cs">
+      <DependentUpon>ILG60_00_06_007.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_06_008.aspx.cs">
+      <DependentUpon>ILG60_00_06_008.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_06_008.aspx.designer.cs">
+      <DependentUpon>ILG60_00_06_008.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_06_002.aspx.cs">
+      <DependentUpon>ILG60_00_06_002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_06_002.aspx.designer.cs">
+      <DependentUpon>ILG60_00_06_002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_05_002.aspx.cs">
+      <DependentUpon>ILG60_00_05_002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_05_002.aspx.designer.cs">
+      <DependentUpon>ILG60_00_05_002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_01_001.aspx.cs">
+      <DependentUpon>ILG60_00_01_001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_01_001.aspx.designer.cs">
+      <DependentUpon>ILG60_00_01_001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_04_001.aspx.cs">
+      <DependentUpon>ILG60_00_04_001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_04_001.aspx.designer.cs">
+      <DependentUpon>ILG60_00_04_001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_06_009.aspx.cs">
+      <DependentUpon>ILG60_00_06_009.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_06_009.aspx.designer.cs">
+      <DependentUpon>ILG60_00_06_009.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_08_001.aspx.cs">
+      <DependentUpon>ILG60_00_08_001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_08_001.aspx.designer.cs">
+      <DependentUpon>ILG60_00_08_001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_08_002.aspx.cs">
+      <DependentUpon>ILG60_00_08_002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_08_002.aspx.designer.cs">
+      <DependentUpon>ILG60_00_08_002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_09_001.aspx.cs">
+      <DependentUpon>ILG60_00_09_001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_09_001.aspx.designer.cs">
+      <DependentUpon>ILG60_00_09_001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_09_002.aspx.cs">
+      <DependentUpon>ILG60_00_09_002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_09_002.aspx.designer.cs">
+      <DependentUpon>ILG60_00_09_002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_09_003.aspx.cs">
+      <DependentUpon>ILG60_00_09_003.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_09_003.aspx.designer.cs">
+      <DependentUpon>ILG60_00_09_003.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_09_004.aspx.cs">
+      <DependentUpon>ILG60_00_09_004.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_09_004.aspx.designer.cs">
+      <DependentUpon>ILG60_00_09_004.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_11_001.aspx.cs">
+      <DependentUpon>ILG60_00_11_001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_11_001.aspx.designer.cs">
+      <DependentUpon>ILG60_00_11_001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_11_002.aspx.cs">
+      <DependentUpon>ILG60_00_11_002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_11_002.aspx.designer.cs">
+      <DependentUpon>ILG60_00_11_002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_11_003.aspx.cs">
+      <DependentUpon>ILG60_00_11_003.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_11_003.aspx.designer.cs">
+      <DependentUpon>ILG60_00_11_003.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_12_002_1.aspx.cs">
+      <DependentUpon>ILG60_00_12_002_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_12_002_1.aspx.designer.cs">
+      <DependentUpon>ILG60_00_12_002_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_12_005.aspx.cs">
+      <DependentUpon>ILG60_00_12_005.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_12_005.aspx.designer.cs">
+      <DependentUpon>ILG60_00_12_005.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_12_001.aspx.cs">
+      <DependentUpon>ILG60_00_12_001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_12_001.aspx.designer.cs">
+      <DependentUpon>ILG60_00_12_001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_12_002.aspx.cs">
+      <DependentUpon>ILG60_00_12_002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_12_002.aspx.designer.cs">
+      <DependentUpon>ILG60_00_12_002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_12_003.aspx.cs">
+      <DependentUpon>ILG60_00_12_003.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_12_003.aspx.designer.cs">
+      <DependentUpon>ILG60_00_12_003.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_12_004.aspx.cs">
+      <DependentUpon>ILG60_00_12_004.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_12_004.aspx.designer.cs">
+      <DependentUpon>ILG60_00_12_004.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8109.aspx.cs">
+      <DependentUpon>ILLR8109.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8109.aspx.designer.cs">
+      <DependentUpon>ILLR8109.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8113.aspx.cs">
+      <DependentUpon>ILLR8113.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8113.aspx.designer.cs">
+      <DependentUpon>ILLR8113.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8114.aspx.cs">
+      <DependentUpon>ILLR8114.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8114.aspx.designer.cs">
+      <DependentUpon>ILLR8114.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8201.aspx.cs">
+      <DependentUpon>ILLR8201.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8201.aspx.designer.cs">
+      <DependentUpon>ILLR8201.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8203.aspx.cs">
+      <DependentUpon>ILLR8203.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8203.aspx.designer.cs">
+      <DependentUpon>ILLR8203.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8204.aspx.cs">
+      <DependentUpon>ILLR8204.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8204.aspx.designer.cs">
+      <DependentUpon>ILLR8204.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8210.aspx.cs">
+      <DependentUpon>ILLR8210.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8210.aspx.designer.cs">
+      <DependentUpon>ILLR8210.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8301.aspx.cs">
+      <DependentUpon>ILLR8301.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8301.aspx.designer.cs">
+      <DependentUpon>ILLR8301.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8303.aspx.cs">
+      <DependentUpon>ILLR8303.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8303.aspx.designer.cs">
+      <DependentUpon>ILLR8303.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8304.aspx.cs">
+      <DependentUpon>ILLR8304.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8304.aspx.designer.cs">
+      <DependentUpon>ILLR8304.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8305.aspx.cs">
+      <DependentUpon>ILLR8305.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8305.aspx.designer.cs">
+      <DependentUpon>ILLR8305.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8306.aspx.cs">
+      <DependentUpon>ILLR8306.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8306.aspx.designer.cs">
+      <DependentUpon>ILLR8306.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8311.aspx.cs">
+      <DependentUpon>ILLR8311.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8311.aspx.designer.cs">
+      <DependentUpon>ILLR8311.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8312.aspx.cs">
+      <DependentUpon>ILLR8312.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8312.aspx.designer.cs">
+      <DependentUpon>ILLR8312.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8314.aspx.cs">
+      <DependentUpon>ILLR8314.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8314.aspx.designer.cs">
+      <DependentUpon>ILLR8314.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8341.aspx.cs">
+      <DependentUpon>ILLR8341.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8341.aspx.designer.cs">
+      <DependentUpon>ILLR8341.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8501.aspx.cs">
+      <DependentUpon>ILLR8501.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8501.aspx.designer.cs">
+      <DependentUpon>ILLR8501.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8502.aspx.cs">
+      <DependentUpon>ILLR8502.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8502.aspx.designer.cs">
+      <DependentUpon>ILLR8502.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8503.aspx.cs">
+      <DependentUpon>ILLR8503.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8503.aspx.designer.cs">
+      <DependentUpon>ILLR8503.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ILLR8509.aspx.cs">
+      <DependentUpon>ILLR8509.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILLR8509.aspx.designer.cs">
+      <DependentUpon>ILLR8509.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ALLMODELS.cs" />
+    <Compile Include="Models\BDInvestigateDetailgetByCon.cs" />
+    <Compile Include="Models\BDRevenuegetByCon.cs" />
+    <Compile Include="Models\Configs.cs" />
+    <Compile Include="Models\cryslogin.cs" />
+    <Compile Include="Models\DataReport.cs">
+      <DependentUpon>DataReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DataReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OperModels.cs" />
+    <Compile Include="ILG60_00_02_002.aspx.cs">
+      <DependentUpon>ILG60_00_02_002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_02_002.aspx.designer.cs">
+      <DependentUpon>ILG60_00_02_002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ILG60_00_04_002.aspx.cs">
+      <DependentUpon>ILG60_00_04_002.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_04_002.aspx.designer.cs">
+      <DependentUpon>ILG60_00_04_002.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-02-001.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-02-001.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-03-001.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-03-001.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-04-001.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-04-001.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-05-001.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-05-001.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-06-001.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-06-001.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-06-003.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-06-003.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-06-004.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-06-004.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-06-005.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-06-005.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-06-006.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-06-006.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-06-007.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-06-007.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-06-008.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-06-008.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-06-002.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-06-002.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-01-001.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-01-001.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-02-002.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-02-002.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-04-002.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-04-002.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-05-002.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-05-002.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-06-009.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-06-009.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-07-001.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-07-001.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-08-001.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-08-001.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-08-002.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-08-002.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-09-001.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-09-001.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-09-002.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-09-002.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-09-003.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-09-003.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-09-004.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-09-004.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-11-001.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-11-001.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-11-002.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-11-002.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-11-003.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-11-003.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-12-002-1.cs">
+      <DependentUpon>ILG60-00-12-002-1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-12-005.cs">
+      <DependentUpon>ILG60-00-12-005.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-12-001.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-12-001.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-12-002.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-12-002.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-12-003.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-12-003.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60-00-12-004.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60-00-12-004.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILG60_00_05_003.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILG60_00_05_003.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8109.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8109.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8113.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8113.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8114.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8114.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8201.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8201.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8203.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8203.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8204.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8204.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8210.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8210.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8301.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8301.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8303.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8303.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8304.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8304.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8305.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8305.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8306.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8306.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8311.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8311.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8312.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8312.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8314.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8314.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8341.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8341.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8501.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8501.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8502.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8502.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8503.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8503.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\ILLR8509.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILLR8509.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\Report1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Report1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\sub\6006hcon40.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>6006hcon40.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\sub\con17.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>con17.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\sub\con40.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>con40.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\sub\con41.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>con41.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\SuppressTarget.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuppressTarget.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportModel\TEST.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TEST.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_07_001.aspx.cs">
+      <DependentUpon>ILG60_00_07_001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ILG60_00_07_001.aspx.designer.cs">
+      <DependentUpon>ILG60_00_07_001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuppressTarget.aspx.cs">
+      <DependentUpon>SuppressTarget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuppressTarget.aspx.designer.cs">
+      <DependentUpon>SuppressTarget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TESTS.aspx.cs">
+      <DependentUpon>TESTS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TESTS.aspx.designer.cs">
+      <DependentUpon>TESTS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\DataReport.xsc">
+      <DependentUpon>DataReport.xsd</DependentUpon>
+    </Content>
+    <None Include="Models\DataReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataReport.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Models\DataReport.xss">
+      <DependentUpon>DataReport.xsd</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-02-001.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-02-001.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-03-001.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-03-001.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-04-001.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-04-001.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-05-001.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-05-001.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-06-001.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-06-001.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-06-003.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-06-003.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-06-004.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-06-004.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-06-005.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-06-005.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-06-006.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-06-006.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-06-007.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-06-007.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-06-008.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-06-008.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-06-002.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-06-002.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-01-001.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-01-001.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-02-002.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-02-002.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-04-002.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-04-002.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-05-002.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-05-002.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-06-009.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-06-009.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-07-001.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-07-001.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-08-001.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-08-001.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-08-002.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-08-002.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-09-001.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-09-001.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-09-002.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-09-002.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-09-003.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-09-003.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-09-004.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-09-004.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-11-001.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-11-001.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-11-002.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-11-002.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-11-003.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-11-003.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-12-002-1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-12-002-1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-12-005.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-12-005.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-12-001.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-12-001.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-12-002.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-12-002.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-12-003.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-12-003.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60-00-12-004.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60-00-12-004.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILG60_00_05_003.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILG60_00_05_003.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8109.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8109.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8113.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8113.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8114.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8114.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8201.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8201.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8203.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8203.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8204.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8204.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8210.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8210.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8301.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8301.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8303.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8303.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8304.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8304.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8305.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8305.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8306.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8306.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8311.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8311.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8312.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8312.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8314.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8314.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8341.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8341.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8501.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8501.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8502.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8502.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8503.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8503.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\ILLR8509.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ILLR8509.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\Report1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Report1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\sub\6006hcon40.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>6006hcon40.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\sub\con17.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>con17.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\sub\con40.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>con40.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\sub\con41.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>con41.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\SuppressTarget.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SuppressTarget.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportModel\TEST.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TEST.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3979</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3979/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

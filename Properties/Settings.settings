@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Report_XCS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Lawsuit" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">8777</Value>
+    </Setting>
+    <Setting Name="Arrest" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">7788</Value>
+    </Setting>
+    <Setting Name="Notice" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">7788</Value>
+    </Setting>
+    <Setting Name="Adjust" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">8777</Value>
+    </Setting>
+    <Setting Name="Investigate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">8777</Value>
+    </Setting>
+    <Setting Name="Revenue" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">8777</Value>
+    </Setting>
+    <Setting Name="DBname" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">orcl2</Value>
+    </Setting>
+    <Setting Name="Prove" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">7777</Value>
+    </Setting>
+    <Setting Name="Compare" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">7777</Value>
+    </Setting>
+    <Setting Name="IPserver" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">103.233.193.94</Value>
+    </Setting>
+    <Setting Name="DBuser" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">xcs_mob</Value>
+    </Setting>
+    <Setting Name="DBip" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">103.233.193.94:1521/orcl2</Value>
+    </Setting>
+    <Setting Name="DBpass" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">xcs123</Value>
+    </Setting>
+    <Setting Name="Service" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://webtest.excise.go.th/EDRestServicesUAT/rtn/ViewImageSignature</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
