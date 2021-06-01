@@ -19,27 +19,26 @@ namespace Report_XCS.Models
         {
 
             cryRpt.SetDatabaseLogon(cf.getdbuser, cf.getdbpass, cf.getip, string.Empty);
-            //cryRpt.SetDatabaseLogon("xcs_mob", "xcs123", "10.11.1.89:1521/eddb1nl", string.Empty);
+            //cryRpt.SetDatabaseLogon("illegal60", "ill123", "103.233.193.94:1521/orcl2", string.Empty);
             return cryRpt;
         }
         /*public ReportDocument Getlogin(ReportDocument cryRpt)
         {
-            //ReportDocument rpt = new ReportStatement();
-
+            
             ConnectionInfo crconnectioninfo = new ConnectionInfo();
             TableLogOnInfos crtablelogoninfos = new TableLogOnInfos();
             TableLogOnInfo crtablelogoninfo = new TableLogOnInfo();
 
             Tables CrTables;
 
-            //crconnectioninfo.ServerName = cf.getip;
-            //crconnectioninfo.DatabaseName = string.Empty;
-            //crconnectioninfo.UserID = cf.getdbuser;
-            //crconnectioninfo.Password = cf.getdbpass;
-            crconnectioninfo.ServerName = "10.11.1.89:1521/eddb1nl";
+            crconnectioninfo.ServerName = cf.getip;
             crconnectioninfo.DatabaseName = string.Empty;
-            crconnectioninfo.UserID = "xcs_mob";
-            crconnectioninfo.Password = "xcs123";
+            crconnectioninfo.UserID = cf.getdbuser;
+            crconnectioninfo.Password = cf.getdbpass;
+            //crconnectioninfo.ServerName = "103.233.193.94:1521/orcl2";
+            //crconnectioninfo.DatabaseName = string.Empty;
+            //crconnectioninfo.UserID = "illegal60";
+            //crconnectioninfo.Password = "ill123";
 
             CrTables = cryRpt.Database.Tables;
 
@@ -47,12 +46,8 @@ namespace Report_XCS.Models
             {
                 crtablelogoninfo = CrTable.LogOnInfo;
                 crtablelogoninfo.ConnectionInfo = crconnectioninfo;
-                //crconnectioninfo.ConnectionInfo.IntegratedSecurity = false;
                 CrTable.ApplyLogOnInfo(crtablelogoninfo);
             }
-            //rpt.SetDatabaseLogon("xcs_mob", "xcs123", "10.11.1.89:1521", "eddb1nl");
-            //rpt.SetDataSource(ds);
-            //rpt.Refresh();
             return cryRpt;
         }*/
         public ReportDocument Getsublogin(ReportDocument crReportDocument)
