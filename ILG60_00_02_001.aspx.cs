@@ -71,7 +71,7 @@ namespace Report_XCS
                                 Response.ContentType = "application/json";
                                 Response.AddHeader("cache-control", "no-cache");
                                 Response.AddHeader("Content-Type", "application/json");
-                                Response.Write("{\"Status\":\"ส่งอะไรมาหรอจ๊ะ\"}");
+                                Response.Write("{\"Status\":\"ส่งอะไรมาอ่ะ......\"}");
                                 Response.End();
                             }
                         }
@@ -89,11 +89,14 @@ namespace Report_XCS
                 }
                 catch (Exception ex)
                 {
+                   //Console.WriteLine(ex.StackTrace);
+
                     Response.ClearContent();
                     Response.ContentType = "application/json";
                     Response.AddHeader("cache-control", "no-cache");
                     Response.AddHeader("Content-Type", "application/json");
-                    Response.Write("{\"Status\":" + ex.Message + "}");
+                    //Response.Write("{\"Status\":" + ex.Message + "}");
+                    Response.Write("{\"Status123\":" + ex.StackTrace + ex.Message + "}");
                     Response.End();
                 }
 

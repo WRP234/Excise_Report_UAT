@@ -260,3 +260,13 @@ D:\ED ผู้กระทำผิด\05_Report\Report_XCS_UAT_v0.0.5_170321\o
 D:\ED ผู้กระทำผิด\05_Report\Report_XCS_UAT_v0.0.5_170321\obj\Debug\Report_XCS.csproj.CopyComplete
 D:\ED ผู้กระทำผิด\05_Report\Report_XCS_UAT_v0.0.5_170321\obj\Debug\Report_XCS.dll
 D:\ED ผู้กระทำผิด\05_Report\Report_XCS_UAT_v0.0.5_170321\obj\Debug\Report_XCS.pdb
+C:\Users\Best\OneDrive\เอกสาร\GitHub\Excise_Report_UAT\bin\Report_XCS.dll.config
+C:\Users\Best\OneDrive\เอกสาร\GitHub\Excise_Report_UAT\bin\Report_XCS.dll
+C:\Users\Best\OneDrive\เอกสาร\GitHub\Excise_Report_UAT\bin\Report_XCS.pdb
+C:\Users\Best\OneDrive\เอกสาร\GitHub\Excise_Report_UAT\obj\Debug\Report_XCS.csprojAssemblyReference.cache
+C:\Users\Best\OneDrive\เอกสาร\GitHub\Excise_Report_UAT\obj\Debug\Report_XCS.Properties.Resources.resources
+C:\Users\Best\OneDrive\เอกสาร\GitHub\Excise_Report_UAT\obj\Debug\Report_XCS.csproj.GenerateResource.cache
+C:\Users\Best\OneDrive\เอกสาร\GitHub\Excise_Report_UAT\obj\Debug\Report_XCS.csproj.CoreCompileInputs.cache
+C:\Users\Best\OneDrive\เอกสาร\GitHub\Excise_Report_UAT\obj\Debug\Report_XCS.csproj.CopyComplete
+C:\Users\Best\OneDrive\เอกสาร\GitHub\Excise_Report_UAT\obj\Debug\Report_XCS.dll
+C:\Users\Best\OneDrive\เอกสาร\GitHub\Excise_Report_UAT\obj\Debug\Report_XCS.pdb

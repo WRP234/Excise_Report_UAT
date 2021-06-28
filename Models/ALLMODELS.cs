@@ -8,11 +8,15 @@ namespace Report_XCS.Models
     public class ALLMODELS
     {
     }
+
+    public class testjson
+    {
+        public int id { set; get; }
+    }
+
     public class testjson1
     {
         public int id { set; get; }
-
-
     }
 
     public class RequestViewImageSignature

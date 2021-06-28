@@ -28,6 +28,7 @@ namespace Report_XCS {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TB1;
+        //protected global::System.Web.UI.WebControls.TextBox TB1;
+        protected global::CrystalDecisions.Web.CrystalReportViewer CrystalReportViewer1;
     }
 }
