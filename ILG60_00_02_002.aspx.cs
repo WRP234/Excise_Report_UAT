@@ -51,6 +51,7 @@ namespace Report_XCS
                                     Convert.ToBase64CharArray(inArray, 0, inArray.Length, outArray, 0);
                                     DiskFileDestinationOptions diskOpts = new DiskFileDestinationOptions();
                                     string targetFileName = Request.PhysicalApplicationPath + "Reports\\TempReports\\" + filename + "_" + (new Random()).Next() + ".pdf";
+                                    //string targetFileName  "C:\" + "Reports\\TempReports\\" + filename + "_" + (new Random()).Next() + ".pdf";
                                     rpt.ExportOptions.ExportDestinationType = ExportDestinationType.DiskFile;
                                     rpt.ExportOptions.ExportFormatType = ExportFormatType.PortableDocFormat;
                                     diskOpts.DiskFileName = targetFileName;
@@ -58,7 +59,7 @@ namespace Report_XCS
                                     rpt.Export();
                                     FileInfo file = new FileInfo(targetFileName);
                                     Response.ClearContent();
-                                    Response.AddHeader("Content-Disposition", "attachment; filename=" + file.Name);
+                                    Response.AddHeader("Content-Disposition", "attachment; filename=" + file.Name;
                                     Response.AddHeader("Content-Length", file.Length.ToString());
                                     Response.ContentType = "application/pdf";
                                     Response.TransmitFile(file.FullName);
