@@ -59,7 +59,7 @@ namespace Report_XCS
                                     rpt.Export();
                                     FileInfo file = new FileInfo(targetFileName);
                                     Response.ClearContent();
-                                    Response.AddHeader("Content-Disposition", "attachment; filename=" + file.Name;
+                                    Response.AddHeader("Content-Disposition", "attachment; filename=" + file.Name);
                                     Response.AddHeader("Content-Length", file.Length.ToString());
                                     Response.ContentType = "application/pdf";
                                     Response.TransmitFile(file.FullName);
